@@ -1,0 +1,86 @@
+import type { Conversation } from '../types/message.types';
+
+export const initialConversations: Conversation[] = [
+  {
+    id: 'conversation-2048',
+    caseId: 'WSL-2048',
+    doctor: 'د. خالد الزهراني',
+    initials: 'خز',
+    clinic: 'عيادات صفوة الابتسامة',
+    service: 'تاج زركونيا للسن 26',
+    status: 'بانتظار المراجعة',
+    lastMessage: 'أهلًا دكتور، استلمنا الملفات...',
+    lastTime: '11:30 ص',
+    unread: 1,
+    messages: [
+      {
+        id: 'msg-1',
+        sender: 'doctor',
+        author: 'د. خالد الزهراني',
+        body: 'السلام عليكم، تم رفع حالة جديدة لتاج زركونيا للسن 26. يرجى مراعاة الإطباق واستخدام زركونيا عالية الشفافية بدرجة A2.',
+        time: '10:15 ص',
+        attachments: [
+          { name: 'Scan_26.stl', size: '14.2 MB' },
+          { name: 'Prescription.pdf', size: '1.1 MB' },
+          { name: 'Clinical_Photos.jpg', size: '6.3 MB' },
+        ],
+      },
+      {
+        id: 'msg-2',
+        sender: 'internal',
+        author: 'أحمد العتيبي',
+        body: 'الملفات واضحة، ويجب التأكد من مساحة الإطباق قبل البدء بالتصميم. تم تحويلها لفني التصميم.',
+        time: '10:45 ص',
+      },
+      {
+        id: 'msg-3',
+        sender: 'lab',
+        author: 'أحمد العتيبي',
+        body: 'أهلًا دكتور، استلمنا الملفات وستتم مراجعتها خلال ساعة، ثم نرسل عرض السعر والموعد المتوقع.',
+        time: '11:30 ص',
+      },
+    ],
+  },
+  {
+    id: 'conversation-2039',
+    caseId: 'WSL-2039',
+    doctor: 'د. نورة السبيعي',
+    initials: 'نس',
+    clinic: 'مركز د. نورة السبيعي',
+    service: 'جسر إيماكس 11–13',
+    status: 'تم اعتماد العرض',
+    lastMessage: 'تم تأكيد الدفع، شكرًا لك.',
+    lastTime: 'أمس',
+    unread: 0,
+    messages: [
+      {
+        id: 'msg-4',
+        sender: 'doctor',
+        author: 'د. نورة السبيعي',
+        body: 'تم تأكيد الدفع، شكرًا لكم. أرجو إرسال التصميم قبل التصنيع.',
+        time: 'أمس، 3:20 م',
+      },
+    ],
+  },
+  {
+    id: 'conversation-2046',
+    caseId: 'WSL-2046',
+    doctor: 'د. رامي سعد',
+    initials: 'رس',
+    clinic: 'مجمع أفق الأسنان',
+    service: 'طقم جزئي مرن',
+    status: 'قيد التصنيع',
+    lastMessage: 'المرفقات واضحة، سنبدأ العمل.',
+    lastTime: 'الإثنين',
+    unread: 0,
+    messages: [
+      {
+        id: 'msg-5',
+        sender: 'lab',
+        author: 'سارة العتيبي',
+        body: 'المرفقات واضحة، وسنبدأ العمل بعد وصول الطبعة عصر اليوم.',
+        time: 'الإثنين، 1:10 م',
+      },
+    ],
+  },
+];

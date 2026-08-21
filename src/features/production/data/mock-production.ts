@@ -1,0 +1,106 @@
+import type {
+  ProductionCase,
+  ProductionStage,
+} from '../types/production.types';
+
+export const productionStages: Array<{
+  id: ProductionStage;
+  label: string;
+  tone: string;
+}> = [
+  { id: 'design', label: 'قيد التصميم', tone: 'text-warning bg-warning-tint' },
+  {
+    id: 'manufacturing',
+    label: 'قيد التصنيع',
+    tone: 'text-medical bg-medical-tint',
+  },
+  { id: 'quality', label: 'فحص الجودة', tone: 'text-brand bg-brand-tint' },
+  { id: 'ready', label: 'جاهز للتسليم', tone: 'text-success bg-success-tint' },
+];
+
+export const initialProductionCases: ProductionCase[] = [
+  {
+    id: 'WSL-2051',
+    service: 'تصميم ابتسامة رقمي DSD',
+    doctor: 'د. محمد السعيد',
+    clinic: 'مجمع رواد الأسنان',
+    due: '22 أغسطس',
+    attachments: 4,
+    technician: 'سارة العتيبي',
+    technicianInitials: 'سع',
+    stage: 'design',
+    priority: 'normal',
+  },
+  {
+    id: 'WSL-2042',
+    service: 'دليل جراحي للزراعة',
+    doctor: 'د. ريم الفهد',
+    clinic: 'عيادات ريف',
+    due: 'متأخر منذ أمس',
+    attachments: 1,
+    technician: 'محمد النمر',
+    technicianInitials: 'من',
+    stage: 'design',
+    priority: 'overdue',
+  },
+  {
+    id: 'WSL-2048',
+    service: 'تاج زركونيا — السن 26',
+    doctor: 'د. خالد الزهراني',
+    clinic: 'عيادات صفوة الابتسامة',
+    due: '25 أغسطس',
+    attachments: 3,
+    technician: 'خالد محمد',
+    technicianInitials: 'خم',
+    stage: 'manufacturing',
+    priority: 'normal',
+  },
+  {
+    id: 'WSL-2046',
+    service: 'جسر إيماكس — 11–13',
+    doctor: 'د. نورة السبيعي',
+    clinic: 'مركز بسمتك',
+    due: 'اليوم، 6:00 م',
+    attachments: 2,
+    technician: 'عمر الراشد',
+    technicianInitials: 'عر',
+    stage: 'manufacturing',
+    priority: 'urgent',
+  },
+  {
+    id: 'WSL-2039',
+    service: 'طقم جزئي مرن',
+    doctor: 'د. سعد المري',
+    clinic: 'مجمع أفق الأسنان',
+    due: 'غدًا، 10:00 ص',
+    attachments: 1,
+    technician: 'مدير الجودة',
+    technicianInitials: 'مج',
+    stage: 'quality',
+    priority: 'normal',
+  },
+  {
+    id: 'WSL-2035',
+    service: 'تاج إيماكس — السن 11',
+    doctor: 'د. أحمد الياسين',
+    clinic: 'عيادات أراك',
+    due: 'جاهز الآن',
+    attachments: 2,
+    technician: 'فريق التسليم',
+    technicianInitials: 'فت',
+    stage: 'ready',
+    priority: 'normal',
+  },
+  {
+    id: 'WSL-2032',
+    service: 'مثبت تقويم شفاف',
+    doctor: 'د. سارة المنصور',
+    clinic: 'عيادات نقاء',
+    due: 'اليوم، 4:00 م',
+    attachments: 2,
+    technician: 'فريق التسليم',
+    technicianInitials: 'فت',
+    stage: 'ready',
+    priority: 'normal',
+  },
+];
